@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launcher [CSS challenge]</title>
+    <link rel="icon" href="/images/icon-main.svg">
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&family=Quicksand:wght@400;700&family=Raleway&family=Righteous&family=Roboto&family=Titillium+Web&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(#181616, #1a1a1a);
+        }
+
+        .navbar {
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 25vw;
+            background: #181616;
+            box-shadow: 8px 2px 38px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 8px 2px 38px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 8px 2px 38px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        .img-text {
+            position: relative;
+            min-width: 120px;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: auto;
+            background: transparent;
+            width: 15vw;
+            transition: 0.5s;
+            /* cursor: crosshair; */
+        }
+
+        .img-text:hover {
+            transition: 0.8s;
+            -webkit-box-reflect: below -50px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            p {
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+            }
+
+            .img-text {
+                padding: 1.2rem;
+            }
+
+            .footer {
+                padding: 2rem !important;
+                height: 30vh !important;
+                top: 370vh !important;
+                font-size: 1rem !important;
+            }
+
+            .java-editon {
+                font-size: 0.4rem !important;
+                padding: 1rem !important;
+                text-align: justify !important;
+            }
+
+            .java-editon:hover {
+                border-left: 0.8rem solid #303030 !important;
+            }
+
+            .img-java {
+                width: 1.5rem !important;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .label {
+                text-align: center !important;
+                right: 50%;
+                transform: translateX(-10%);
+            }
+
+            .image-holder {
+                background: url(/images/img-launcher-alt.jpg) center !important;
+                background-size: auto;
+            }
+
+            .button {
+                font-size: 0.8rem !important;
+                padding-left: 2.3rem !important;
+                padding-right: 2.3rem !important;
+                padding-top: 0.8rem !important;
+                padding-bottom: 0.8rem !important;
+                left: 55% !important;
+                transform: translateX(-50%);
+            }
+
+            .cp {
+                font-size: 0.5rem;
+            }
+        }
+
+        .java-editon {
+            position: relative;
+            top: 20vh;
+            background: rgba(0, 0, 0, 0.122);
+            font-size: 1rem;
+            padding: 2rem;
+            text-align: center;
+            font-family: 'Titillium Web';
+            transition: 0.3s;
+        }
+
+        .java-editon:hover {
+            background: rgba(255, 255, 255, 0.022);
+            transition: 0.3s;
+            cursor: pointer;
+            border-left: 1.2rem solid #303030;
+        }
+
+        .img-java {
+            position: relative;
+            width: 2rem;
+        }
+
+        .label {
+            color: #fff;
+            text-align: center;
+        }
+
+        .label:hover {
+            cursor: pointer;
+        }
+
+        .image-holder {
+            position: relative;
+            width: 75vw;
+            left: 25vw;
+            height: 60vh;
+            /* background: #1a1a1a; */
+            background: url(/images/launcher-img.webp) center no-repeat;
+            overflow: hidden;
+            box-shadow: 8px 2px 38px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 8px 2px 38px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 8px 2px 38px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #303030;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #888;
+        }
+
+        .button {
+            position: relative;
+            top: 5%;
+            left: 58%;
+            transform: translate(-5%, -58%);
+            text-align: center;
+            font-family: 'Titillium Web';
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 17px / 85px;
+            border: 2px solid #000;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background: #008800;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background: #004a00;
+            color: rgb(188, 188, 188);
+        }
+
+        ::selection {
+            background: #fff;
+            color: #181616;
+        }
+
+        .ribbon {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            z-index: 1;
+            overflow: hidden;
+            width: 75px;
+            height: 75px;
+            text-align: right;
+        }
+
+        .ribbon span {
+            font-size: 10px;
+            font-weight: bold;
+            color: #FFF;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 20px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            width: 100px;
+            display: block;
+            background: #79A70A;
+            background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+            box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 19px;
+            right: -21px;
+        }
+
+        .ribbon span::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid #79A70A;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #79A70A;
+        }
+
+        .ribbon span::after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid transparent;
+            border-right: 3px solid #79A70A;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #79A70A;
+        }
+
+        .cp {
+            font-family: "Titillium Web";
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 60%;
+            transform: translateX(-43%);
+            text-align: center;
+            overflow: show;
+            z-index: 99999999;
+        }
+
+        .cp::-webkit-scrollbar {
+            width: 0px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="/images/img-text.svg" class="img-text">
+        <div class="java-editon">
+            <img src="/images/icon-main.svg" class="img-java">
+            <p class="label">Java Editon</p>
+        </div>
+    </div>
+    <div class="image-holder">
+        <div class="ribbon"><span>JAVA</span></div>
+    </div>
+    <a href="main.html" class="button">
+        Play
+    </a>
+
+    <p style="text-align: center;" class="cp">© Copyright 2022-2023<br />Minecraft™ is a trademark of <b>Mojang
+            Synergies
+            AB</b>. We are not
+        affiliated with Mojang.<br />
+
+    </p>
+    <script>
+        function respond() {
+            alert("Attension Viewer, This is an attempt of a challeneg given by 'css-challenges.com' Made for Fun.");
+        }
+        respond();
+    </script>
+</body>
+
+</html>
